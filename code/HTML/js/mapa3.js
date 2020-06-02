@@ -24,7 +24,7 @@ function myFunction() {
                 markers.removeLayer(markers)
                 markers = L.markerClusterGroup({maxClusterRadius: przelicznik});
                 for (var i = 0; i < neigh.length; i++) {
-                    if (neigh[i]['v'] == '') {
+                    // if (neigh[i]['v'] == '') {
                         markers.addLayer(L.circleMarker([neigh[i]['lt'], neigh[i]['ln']], {
                             radius: 5,
                             fillColor: "white",
@@ -33,17 +33,17 @@ function myFunction() {
                             weight: 0.5,
                             fillOpacity: 1
                         }).bindPopup(`${i}`));
-                    }
-                    else {
-                        markers.addLayer(L.circleMarker([neigh[i]['lt'], neigh[i]['ln']], {
-                            radius: 5,
-                            fillColor: "red",
-                            color: "black",
-                            opacity: 1,
-                            weight: 0.5,
-                            fillOpacity: 1
-                        }).bindPopup(`${i}`));
-                    }
+                    // }
+                    // else {
+                    //     markers.addLayer(L.circleMarker([neigh[i]['lt'], neigh[i]['ln']], {
+                    //         radius: 5,
+                    //         fillColor: "red",
+                    //         color: "black",
+                    //         opacity: 1,
+                    //         weight: 0.5,
+                    //         fillOpacity: 1
+                    //     }).bindPopup(`${i}`));
+                    // }
 
                 }
                 map.addLayer(markers)
@@ -53,7 +53,7 @@ function myFunction() {
                 markers.removeLayer(markers)
                 markers = L.markerClusterGroup({maxClusterRadius: przelicznik});
                 for (var i = 0; i < neigh.length; i++) {
-                    if (neigh[i]['v'] == '') {
+                    // if (neigh[i]['v'] == '') {
                         markers.addLayer(L.circleMarker([neigh[i]['lt'], neigh[i]['ln']], {
                             radius: 5,
                             fillColor: "white",
@@ -62,17 +62,17 @@ function myFunction() {
                             weight: 0.5,
                             fillOpacity: 1
                         }).bindPopup(`${i}`));
-                    }
-                    else {
-                        markers.addLayer(L.circleMarker([neigh[i]['lt'], neigh[i]['ln']], {
-                            radius: 5,
-                            fillColor: "red",
-                            color: "black",
-                            opacity: 1,
-                            weight: 0.5,
-                            fillOpacity: 1
-                        }).bindPopup(`${i}`));
-                    }
+                    // }
+                    // else {
+                    //     markers.addLayer(L.circleMarker([neigh[i]['lt'], neigh[i]['ln']], {
+                    //         radius: 5,
+                    //         fillColor: "red",
+                    //         color: "black",
+                    //         opacity: 1,
+                    //         weight: 0.5,
+                    //         fillOpacity: 1
+                    //     }).bindPopup(`${i}`));
+                    // }
                 }
                 map.addLayer(markers)
             }
@@ -83,7 +83,7 @@ function myFunction() {
 
         var markers = L.markerClusterGroup({maxClusterRadius: przelicznik});
         for (var i = 0; i < neigh.length; i++) {
-            if (neigh[i]['v'] == '') {
+            // if (neigh[i]['v'] == '') {
                 markers.addLayer(L.circleMarker([neigh[i]['lt'], neigh[i]['ln']], {
                     radius: 5,
                     fillColor: "white",
@@ -92,17 +92,17 @@ function myFunction() {
                     weight: 0.5,
                     fillOpacity: 1
                 }).bindPopup(`${i}`));
-            }
-            else {
-                markers.addLayer(L.circleMarker([neigh[i]['lt'], neigh[i]['ln']], {
-                    radius: 5,
-                    fillColor: "red",
-                    color: "black",
-                    opacity: 1,
-                    weight: 0.5,
-                    fillOpacity: 1
-                }).bindPopup(`${i}`));
-            }
+            // }
+            // else {
+            //     markers.addLayer(L.circleMarker([neigh[i]['lt'], neigh[i]['ln']], {
+            //         radius: 5,
+            //         fillColor: "red",
+            //         color: "black",
+            //         opacity: 1,
+            //         weight: 0.5,
+            //         fillOpacity: 1
+            //     }).bindPopup(`${i}`));
+            // }
         }
         map.addLayer(markers);
 

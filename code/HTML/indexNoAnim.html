@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Leaflet Map</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <h1 id="header">Click input parameters</h1>
+    <div id="mySidepanel" class="sidepanel">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+
+      <!-- <p>Input:</p><button onclick="set1(2)">2</button><button onclick="set1(5)">5</button><button  onclick="set1(10)">10</button><button onclick="set1(15)">15</button> <button onclick="noAnimation()">SET</button></br>
+      <p>Cars:</p><button onclick="setSpawnCars(750)">750</button><button onclick="setSpawnCars(1500)">1500</button><button onclick="setSpawnCars(2000)">2000</button><button onclick="setSpawnCars(3000)">3000</button> </br> -->
+
+      <p>Input:</p><input type="radio" id="in2" name="in" value="2" onclick="setInputSidePanel(2)"><label for="in2"> 2</label>
+      <input type="radio" id="in5" name="in" value="5" onclick="setInputSidePanel(5)"><label for="in5"> 5</label>
+      <input type="radio" id="in10" name="in" value="10" onclick="setInputSidePanel(10)"><label for="in10"> 10</label>
+      <input type="radio" id="in15" name="in" value="15" onclick="setInputSidePanel(15)"><label for="in15"> 15</label>
+      <button onclick="noAnimation()">SET</button></br>
+
+      <p>Cars:</p><input type="radio" id="in750" name="cars" value="750" onclick="setCarsSidePanel(750)"><label for="in750"> 750</label>
+      <input type="radio" id="in1500" name="cars" value="1500" onclick="setCarsSidePanel(1500)"><label for="in1500"> 1500</label>
+      <input type="radio" id="in2000" name="cars" value="2000" onclick="setCarsSidePanel(2000)"><label for="in2000"> 2000</label>
+      <input type="radio" id="in3000" name="cars" value="3000" onclick="setCarsSidePanel(3000)"><label for="in3000"> 3000</label></br></br>
+
+
+      <input id="2919" type="number" min="0" max="1000" step="1" value="0">  <p>Byrska 1</p> </br>
+      <input id="16367" type="number" min="0" max="1000" step="1" value="0"> <p>Byrska 2</p></br>
+      <input id="3509" type="number" min="0" max="1000" step="1" value="0"> <p>Czarnowiejska 1</p> </br>
+      <input id="16080" type="number" min="0" max="1000" step="1" value="0"> <p>D-Wąsowicza</p> </br>
+      <input id="3054" type="number" min="0" max="1000" step="1" value="0"> <p>Dietla</p> </br>
+      <input id="15995" type="number" min="0" max="1000" step="1" value="0"> <p>Focha</p> </br>
+      <input id="17284" type="number" min="0" max="1000" step="1" value="0"> <p>Kamienna</p> </br>
+      <input id="4576" type="number" min="0" max="1000" step="1" value="0"> <p>Klimieckiego</p> </br>
+      <input id="3570" type="number" min="0" max="1000" step="1" value="0"> <p>Kochanowskiego</p> </br>
+      <input id="16622" type="number" min="0" max="1000" step="1" value="0"> <p>Kuklińskiego</p> </br>
+      <input id="2390" type="number" min="0" max="1000" step="1" value="0"> <p>Lubicz</p> </br>
+      <input id="3699" type="number" min="0" max="1000" step="1" value="0"> <p>Łobuzowska 1</p> </br>
+      <input id="15676" type="number" min="0" max="1000" step="1" value="0"> <p>Łobuzowska 2</p> </br>
+      <input id="17478" type="number" min="0" max="1000" step="1" value="0"> <p>Mazowiecka</p> </br>
+      <input id="16236" type="number" min="0" max="1000" step="1" value="0"> <p>M.Casino</p> </br>
+      <input id="3758" type="number" min="0" max="1000" step="1" value="0"> <p>Nowochucka</p> </br>
+      <input id="3355" type="number" min="0" max="1000" step="1" value="0"> <p>Piłsudskiego</p> </br>
+      <input id="16719" type="number" min="0" max="1000" step="1" value="0"> <p>Podgórska</p> </br>
+      <input id="16773" type="number" min="0" max="1000" step="1" value="0"> <p>Al.Pokoju</p> </br>
+      <input id="3854" type="number" min="0" max="1000" step="1" value="0"> <p>Pow. Wielkopolskich</p> </br>
+      <input id="17367" type="number" min="0" max="1000" step="1" value="0"> <p>Prądnicka</p> </br>
+      <input id="8026" type="number" min="0" max="1000" step="1" value="0"> <p>Rakowicka</p> </br>
+      <input id="17437" type="number" min="0" max="1000" step="1" value="0"> <p>Śląska</p> </br>
+      <input id="6470" type="number" min="0" max="1000" step="1" value="0"> <p>Warszawska</p> </br>
+      <input id="8225" type="number" min="0" max="1000" step="1" value="0"> <p>Zabłocie</p> </br>
+      <input id="3225" type="number" min="0" max="1000" step="1" value="0"> <p>Zwierzyniecka</p> </br>
+
+
+    </div>
+
+    <div id="mySidepanel2" class="sidepanelLeft">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <p>Czarnowiejska/Mickiewicza 1:</p> <p id="j0"></p></br>
+        <p>Czarnowiejska/Mickiewicza 2:</p> <p id="j1"></p></br>
+        <p>Łobuzowska/Mickiewicza 1:</p> <p id="j2"></p></br>
+        <p>Łobuzowska/Mickiewicza 2:</p> <p id="j3"></p></br>
+        <p>Kościuszki/Krasińskiego 1:</p> <p id="j4"></p></br>
+        <p>Kościuszki/Krasińskiego 2:</p> <p id="j5"></p></br>
+        <p>Piłsudskiego/Mickiewicza 1:</p> <p id="j6"></p></br>
+        <p>Piłsudskiego/Mickiewicza 2:</p> <p id="j7"></p></br>
+        <p>Śląska/Słowackiego 1:</p> <p id="j8"></p></br>
+        <p>Śląska/Słowackiego 2:</p> <p id="j9"></p></br>
+        <p>Rakowicka/Lubomirskiego 1:</p> <p id="j10"></p></br>
+        <p>Rakowicka/Lubomirskiego 2:</p> <p id="j11"></p></br>
+        <p>Dekerta/Klimeckiego 1:</p> <p id="j12"></p></br>
+        <p>Dekerta/Klimeckiego 2:</p> <p id="j13"></p></br>
+        <p>Wadowicka/Konopnickiej 2:</p> <p id="j14"></p>
+    </div>
+
+
+
+    <div class="panel">
+        <button class="openbtn" onclick="openNav()">&#9776; Input parameters</button>
+        <!-- <button id="btn" onclick="">Add points</button> -->
+        <button id="btn2" onclick="ruch()">Start traffic</button>
+        <button id="btn3" onclick="stopRuch()">Stop traffic</button>
+        <button id="btn4" onclick="changeLights()">Change lights</button>
+        Lights time:
+        <input id="lightstime" type="number" min="5" max="120" step="1" value="40">
+        <!-- Input/min:
+        <input id="inputTime" type="number" min="0" max="40" step="1" value="20">
+        Spawn cars:
+        <input id="inputCar" type="number" min="0" max="1000" step="1" value="400"> -->
+        <button class="openbtn2" onclick="openNav2()">Junction flow &#9776; </button>
+
+    </div>
+
+
+
+
+
+    <!-- <div id="map" style="height: 65vh"></div> -->
+
+    <script src="leaflet/leaflet.js"></script>
+    <script src="canvasjs/canvasjs.min.js"></script>
+
+
+    <script src="leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <script src="Filesaver/Filesaver.js"></script>
+    <script src="js/traffic.js"></script>
+    <script src="js/neighbours.js"></script>
+    <!-- <script src="js/mapa3.js"></script> -->
+    <script src="js/vehicles.js"></script>
+    <script src="js/lights.js"></script>
+
+
+    Save data:
+    <button id="btn5" onclick="saveData()">Save data</button>
+    Show veh:
+    <button id="btn6" onclick="shNextVeh()">Show in console</button>
+    Show veh:
+    <button id="btn6" onclick="saveFlow()">Save flow</button>
+
+    <br>
+    <div class="row">
+        <div class="column">
+            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+        </div>
+        <div class="column">
+            <div id="chartContainerOutFlow" style="height: 300px; width: 100%;"></div>
+        </div>
+    </div>
+
+</body>
+</html>
