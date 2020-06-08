@@ -6,6 +6,10 @@ Zespół: Paweł Pytlowski, Krzysztof Sawina, Miłosz Wrzesień
 
 ![Farmers Market Finder Demo](doc/demo/demo.gif)
 
-Wykresy aktualnej średniej prędkości oraz in/outflow na obwodnicy:
+Wygląd aplikacji:
 
-![picture](doc/demo/demo2.png)
+![picture](doc/demo/zrzutAplikacji.png)
+
+Możliwość ręczego wybrania liczby aut na drogach wjazdowych:
+
+![picture](doc/demo/zrzut2.png)
