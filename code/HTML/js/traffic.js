@@ -59,13 +59,20 @@ function ruch() {
     inputCarsDirectPlace();
     spawnCars(n);
     minuteFlow();
-    moveCars(60, 100, markers2);
-    moveCars(50, 150, markers3);
-    moveCars(40, 200, markers4);
-    moveCars(30, 250, markers5);
-    moveCars(20, 300, markers6);
-    moveCars(10, 350, markers7);
-    moveCars(0, 350, markers8);
+    // moveCars(60, 100, markers2);
+    // moveCars(50, 150, markers3);
+    // moveCars(40, 200, markers4);
+    // moveCars(30, 250, markers5);
+    // moveCars(20, 300, markers6);
+    // moveCars(10, 350, markers7);
+    // moveCars(0, 350, markers8);
+    moveCars(60, 180, markers2);
+    moveCars(50, 240, markers3);
+    moveCars(40, 300, markers4);
+    moveCars(30, 360, markers5);
+    moveCars(20, 420, markers6);
+    moveCars(10, 480, markers7);
+    moveCars(0, 480, markers8);
     setMaxSpeed();
 
     // setInputTime();
@@ -141,6 +148,10 @@ function move(speed) {
                     decideWhichLayer(speed, i)
                     nextVeh[i]['cl']++
                     nextVeh[i]['l']++
+                    // CZAS0 = GETCOSTSM
+                    // CZAS1 = CZAS0+CZAS1
+                    //
+                    // if czas0-CZAS1 >1000
                     accelerate1(i, nextVeh[i]['s'])
 
                 }
@@ -306,6 +317,8 @@ function addToLayer(layer600, i) {
     // // nextveh.push(lr: this)
     // if (nextVeh[i]['w'] != nextVeh[i]['s']) {
     //     usun(nextVeh[i]['lr'])
+    //     // map.removeLayer(nextVeh[i]['lr'])
+    //     // nextVeh[i]['lr'].remove()
     //     nextVeh[i]['w'] = nextVeh[i]['s']
     // }
 
@@ -1078,7 +1091,7 @@ function setButtonFunction() {
     if (animation) {
         myFunction();
     }
-    set1(globalInput);
+
     setSpawnCars();
 
     array = []
@@ -1119,6 +1132,7 @@ function setSpawnCars() {
 
 function setInputSidePanel(input) {
     globalInput = input
+    set1(globalInput);
 }
 
 function setCarsSidePanel(cars) {
